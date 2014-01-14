@@ -1,0 +1,18 @@
+callback([
+	{
+		'title': 'ให้เลี้ยวซ้ายหรือเลี้ยวขวา',
+		'img': 'images/mandatory1/33.png',
+		'img_h': '80%',
+		'img_w': '80%',
+		'desc': 'ให้ขับรถไปทางซ้าย หรือไปทางขวา',
+		'cat': '1'
+	},
+		{
+		'title': 'fsdfsdff',
+		'img': 'images/mandatory1/32.png',
+		'img_h': '80%',
+		'img_w': '80%',
+		'desc': 'ให้ขับรถไปทางซ้าย gdfg',
+		'cat': '2'
+	}
+])

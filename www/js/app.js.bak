@@ -1,0 +1,37 @@
+$(function() {
+	var get_list = function(cat) {
+		$.ajax({
+			url: 'data/contents.json',
+			async: false,
+			dataType: "jsonp",
+     		crossDomain: true,
+			jsonpCallback: 'callback'
+		}).done(function(data) {
+			console.log(data);
+			set_list(data, cat);	
+		});
+	};
+	
+	var set_list = function(data, cat) {
+		var items = [];
+		 $.each( data, function( i, v ) {
+			if(v.cat == cat) {
+			items.push( '<li><img src="'+ v.img +'" width="'+ v.img_w +'" height="'+ v.img_h +'"><h2>'+ v.title +'</h2> ' + v.desc + '</li>' );	
+			}
+		 });
+		 
+		 $('#lst_main').empty();
+		 $('#lst_main').html(items);
+	}
+	
+	//get_list();
+
+	$(document).on('click', '#go_page2', function(e) {
+		get_list('1');
+	});
+
+	$(document).on('click', '#go_page3', function(e) {
+		get_list('2);
+	});
+
+});
